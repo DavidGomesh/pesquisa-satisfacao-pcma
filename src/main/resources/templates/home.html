@@ -29,8 +29,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png"
-                    class="brand-image  elevation-2">
+                <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="brand-image  elevation-2">
                 <span class="brand-text font-weight-light">Polícia Civil</span>
             </a>
 
@@ -103,307 +102,307 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Dados Pessoais Optativos -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Dados Pessoais (Optativo)</h3>
+                <form action="" method="post">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Dados Pessoais Optativos -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Dados Pessoais (Optativo)</h3>
 
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                        title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                                            title="Collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Nome, Idade e Sexo -->
+                                    <div class="row">
+                                        <!-- Nome -->
+                                        <div class="col-12 col-md-4">
+                                            <div class="form-group">
+                                                <label for="nome">Nome</label>
+                                                <input type="text" id="nome" class="form-control"
+                                                    placeholder="Nome completo">
+                                            </div>
+                                        </div>
+
+                                        <!-- Idade -->
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-group">
+                                                <label for="idade">Idade</label>
+                                                <input type="number" id="idade" class="form-control" placeholder="Idade"
+                                                    min="0" max="120">
+                                            </div>
+                                        </div>
+
+                                        <!-- Nome -->
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-group">
+                                                <label for="sexo">Sexo</label>
+                                                <select id="sexo" class="form-control custom-select">
+                                                    <option selected disabled>Selecione</option>
+                                                    <option>Masculino</option>
+                                                    <option>Feminino</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CPF e Telefone -->
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <!-- CPF -->
+                                            <div class="form-group">
+                                                <label for="CPF">CPF</label>
+                                                <input type="number" id="CPF" class="form-control" placeholder="CPF"
+                                                    min="0" max="120">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <!-- Telefone -->
+                                            <div class="form-group">
+                                                <label for="telefone">Telefone</label>
+                                                <input type="tel" id="telefone" class="form-control"
+                                                    placeholder="Telefone" min="0" max="120">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- E-mail -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- E-mail -->
+                                            <div class="form-group">
+                                                <label for="e-mail">E-mail</label>
+                                                <input type="email" id="e-mail" class="form-control"
+                                                    placeholder="exemplo@xxxxx.com">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pessoa com Deficiencia -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- Pessoa com Deficiencia -->
+                                            <div class="form-group">
+                                                <label for="PCD">Pessoa com Deficiencia</label>
+                                                <select id="PCD" class="form-control custom-select">
+                                                    <option selected>Não</option>
+                                                    <option>Sim</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comunidade LGBTQIA+ -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- Comunidade LGBTQIA+ -->
+                                            <div class="form-group">
+                                                <label for="lgbtqia+">Comunidade LGBTQIA+</label>
+                                                <select id="lgbtqia+" class="form-control custom-select">
+                                                    <option selected disabled>Selecione</option>
+                                                    <option>Sim</option>
+                                                    <option>Não</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <!-- Nome, Idade e Sexo -->
-                                <div class="row">
-                                    <!-- Nome -->
-                                    <div class="col-12 col-md-4">
-                                        <div class="form-group">
-                                            <label for="nome">Nome</label>
-                                            <input type="text" id="nome" class="form-control"
-                                                placeholder="Nome completo">
-                                        </div>
-                                    </div>
 
-                                    <!-- Idade -->
-                                    <div class="col-6 col-md-4">
-                                        <div class="form-group">
-                                            <label for="idade">Idade</label>
-                                            <input type="number" id="idade" class="form-control" placeholder="Idade"
-                                                min="0" max="120">
-                                        </div>
-                                    </div>
+                            <!-- Informações sobre o Atendimento -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Informações sobre o Atendimento</h3>
 
-                                    <!-- Nome -->
-                                    <div class="col-6 col-md-4">
-                                        <div class="form-group">
-                                            <label for="sexo">Sexo</label>
-                                            <select id="sexo" class="form-control custom-select">
-                                                <option selected disabled>Selecione</option>
-                                                <option>Masculino</option>
-                                                <option>Feminino</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- CPF e Telefone -->
-                                <div class="row">
-                                    <div class="col-6">
-                                        <!-- CPF -->
-                                        <div class="form-group">
-                                            <label for="CPF">CPF</label>
-                                            <input type="number" id="CPF" class="form-control" placeholder="CPF" min="0"
-                                                max="120">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <!-- Telefone -->
-                                        <div class="form-group">
-                                            <label for="telefone">Telefone</label>
-                                            <input type="tel" id="telefone" class="form-control" placeholder="Telefone"
-                                                min="0" max="120">
-                                        </div>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                                            title="Collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
                                     </div>
                                 </div>
-
-                                <!-- E-mail -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- E-mail -->
-                                        <div class="form-group">
-                                            <label for="e-mail">E-mail</label>
-                                            <input type="email" id="e-mail" class="form-control"
-                                                placeholder="exemplo@xxxxx.com">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Pessoa com Deficiencia -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- Pessoa com Deficiencia -->
-                                        <div class="form-group">
-                                            <label for="PCD">Pessoa com Deficiencia</label>
-                                            <select id="PCD" class="form-control custom-select">
-                                                <option selected>Não</option>
-                                                <option>Sim</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Comunidade LGBTQIA+ -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- Comunidade LGBTQIA+ -->
-                                        <div class="form-group">
-                                            <label for="lgbtqia+">Comunidade LGBTQIA+</label>
-                                            <select id="lgbtqia+" class="form-control custom-select">
-                                                <option selected disabled>Selecione</option>
-                                                <option>Sim</option>
-                                                <option>Não</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Informações sobre o Atendimento -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Informações sobre o Atendimento</h3>
-
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                        title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!-- Local de Atendimento -->
-                                <div class="row">
+                                <div class="card-body">
                                     <!-- Local de Atendimento -->
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="local">Local de Atendimento</label>
-                                            <select id="local" class="form-control custom-select">
-                                                <option selected disabled>Selecione</option>
-                                                <option>Delegacia de São Luís</option>
-                                                <option>Delegacia de Timon</option>
-                                                <option>Delegacia de Imperatriz</option>
-                                                <option>Delegacia de Santa Inês</option>
-                                            </select>
+                                    <div class="row">
+                                        <!-- Local de Atendimento -->
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="local">Local de Atendimento</label>
+                                                <select id="local" class="form-control custom-select">
+                                                    <option selected disabled>Selecione</option>
+                                                    <option>Delegacia de São Luís</option>
+                                                    <option>Delegacia de Timon</option>
+                                                    <option>Delegacia de Imperatriz</option>
+                                                    <option>Delegacia de Santa Inês</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Nome do Atendente -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- Nome do Atendente -->
-                                        <div class="form-group">
-                                            <label for="nome-atendente">Nome do Atendente</label>
-                                            <input type="text" id="nome-atendente" class="form-control"
-                                                placeholder="Nome do Atendente">
+                                    <!-- Nome do Atendente -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- Nome do Atendente -->
+                                            <div class="form-group">
+                                                <label for="nome-atendente">Nome do Atendente</label>
+                                                <input type="text" id="nome-atendente" class="form-control"
+                                                    placeholder="Nome do Atendente">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Cargo -->
-                                <div class="row">
                                     <!-- Cargo -->
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="cargo">Cargo</label>
-                                            <select id="cargo" class="form-control custom-select">
-                                                <option selected disabled>Selecione</option>
-                                                <option>Atendente</option>
-                                                <option>Policial</option>
-                                                <option>Faxineiro</option>
-                                            </select>
+                                    <div class="row">
+                                        <!-- Cargo -->
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="cargo">Cargo</label>
+                                                <select id="cargo" class="form-control custom-select">
+                                                    <option selected disabled>Selecione</option>
+                                                    <option>Atendente</option>
+                                                    <option>Policial</option>
+                                                    <option>Faxineiro</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Serviço -->
-                                <div class="row">
                                     <!-- Serviço -->
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="servico">Serviço</label>
-                                            <select id="servico" class="form-control custom-select">
-                                                <option selected disabled>Selecione</option>
-                                                <option>Acompanhamento de Processos</option>
-                                                <option>Registro de Ocorrência</option>
-                                                <option>Consultas Jurídicas</option>
-                                                <option>Assitência Policial</option>
-                                                <option>Outros</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Numero do BO e Ano do BO -->
-                                <div class="row sr-only" id="numeroAnoBo">
-                                    <div class="col-8">
-                                        <!-- Numero do BO -->
-                                        <div class="form-group">
-                                            <label for="numero-bo">Número do BO</label>
-                                            <input type="number" id="numero-bo" class="form-control"
-                                                placeholder="Número sem o ano" min="0" max="120">
+                                    <div class="row">
+                                        <!-- Serviço -->
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="servico">Serviço</label>
+                                                <select id="servico" class="form-control custom-select">
+                                                    <option selected disabled>Selecione</option>
+                                                    <option>Acompanhamento de Processos</option>
+                                                    <option>Registro de Ocorrência</option>
+                                                    <option>Consultas Jurídicas</option>
+                                                    <option>Assitência Policial</option>
+                                                    <option>Outros</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-4">
-                                        <!-- Ano -->
-                                        <div class="form-group">
-                                            <label for="ano">Ano</label>
-                                            <input type="tel" id="ano" class="form-control" placeholder="Ano" min="0"
-                                                max="120">
+                                    <!-- Numero do BO e Ano do BO -->
+                                    <div class="row sr-only" id="numeroAnoBo">
+                                        <div class="col-8">
+                                            <!-- Numero do BO -->
+                                            <div class="form-group">
+                                                <label for="numero-bo">Número do BO</label>
+                                                <input type="number" id="numero-bo" class="form-control"
+                                                    placeholder="Número sem o ano" min="0" max="120">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <!-- Ano -->
+                                            <div class="form-group">
+                                                <label for="ano">Ano</label>
+                                                <input type="tel" id="ano" class="form-control" placeholder="Ano"
+                                                    min="0" max="120">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Período de Atendimento -->
-                                <div class="row">
                                     <!-- Período de Atendimento -->
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="periodo">Período de Atendimento</label>
-                                            <select id="periodo" class="form-control custom-select">
-                                                <option selected disabled>Selecione</option>
-                                                <option>Matutino</option>
-                                                <option>Vespertino</option>
-                                                <option>Noturno</option>
-                                            </select>
+                                    <div class="row">
+                                        <!-- Período de Atendimento -->
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="periodo">Período de Atendimento</label>
+                                                <select id="periodo" class="form-control custom-select">
+                                                    <option selected disabled>Selecione</option>
+                                                    <option>Matutino</option>
+                                                    <option>Vespertino</option>
+                                                    <option>Noturno</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Avaliação -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- Avaliação -->
-                                        <div class="">
-                                            <label for="numero-bo">Avaliação</label>
-                                        </div>
-                                        <div class="form-group d-flex justify-content-evenly fs-sm-4">
-                                            <label class="row" for="avalicao-otimo" role="button"
-                                                onclick="setAvalicao(1)">
-                                                <div class="col-12 text-center"><i id="icon-avalicao-otimo"
-                                                        class="far fa-laugh"></i></div>
-                                                <div class="col-12 text-center">Ótimo</div>
-                                            </label>
+                                    <!-- Avaliação -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- Avaliação -->
+                                            <div class="">
+                                                <label for="numero-bo">Avaliação</label>
+                                            </div>
+                                            <div class="form-group d-flex justify-content-evenly fs-sm-4">
+                                                <label class="row" for="avalicao-otimo" role="button"
+                                                    onclick="setAvalicao(1)">
+                                                    <div class="col-12 text-center"><i id="icon-avalicao-otimo"
+                                                            class="far fa-laugh"></i></div>
+                                                    <div class="col-12 text-center">Ótimo</div>
+                                                </label>
 
-                                            <label class="row" for="avalicao-bom" role="button"
-                                                onclick="setAvalicao(2)">
-                                                <div class="col-12 text-center"><i id="icon-avalicao-bom"
-                                                        class="far fa-smile"></i></div>
-                                                <div class="col-12 text-center">Bom</div>
-                                            </label>
+                                                <label class="row" for="avalicao-bom" role="button"
+                                                    onclick="setAvalicao(2)">
+                                                    <div class="col-12 text-center"><i id="icon-avalicao-bom"
+                                                            class="far fa-smile"></i></div>
+                                                    <div class="col-12 text-center">Bom</div>
+                                                </label>
 
-                                            <label class="row" for="avalicao-regular" role="button"
-                                                onclick="setAvalicao(3)">
-                                                <div class="col-12 text-center"><i id="icon-avalicao-regular"
-                                                        class="far fa-meh"></i></div>
-                                                <div class="col-12 text-center">Regular</div>
-                                            </label>
+                                                <label class="row" for="avalicao-regular" role="button"
+                                                    onclick="setAvalicao(3)">
+                                                    <div class="col-12 text-center"><i id="icon-avalicao-regular"
+                                                            class="far fa-meh"></i></div>
+                                                    <div class="col-12 text-center">Regular</div>
+                                                </label>
 
-                                            <label class="row" for="avalicao-ruim" role="button"
-                                                onclick="setAvalicao(4)">
-                                                <div class="col-12 text-center"><i id="icon-avalicao-ruim"
-                                                        class="far fa-frown-open"></i></div>
-                                                <div class="col-12 text-center">Ruim</div>
-                                            </label>
+                                                <label class="row" for="avalicao-ruim" role="button"
+                                                    onclick="setAvalicao(4)">
+                                                    <div class="col-12 text-center"><i id="icon-avalicao-ruim"
+                                                            class="far fa-frown-open"></i></div>
+                                                    <div class="col-12 text-center">Ruim</div>
+                                                </label>
 
-                                            <label class="row" for="avalicao-pessimo" role="button"
-                                                onclick="setAvalicao(5)">
-                                                <div class="col-12 text-center"><i id="icon-avalicao-pessimo"
-                                                        class="far fa-angry"></i></div>
-                                                <div class="col-12 text-center">Péssimo</div>
-                                            </label>
-                                        </div>
-                                        <!-- Radios da Avaliacao ocultos -->
-                                        <div class="sr-only">
-                                            <input type="radio" name="avaliacao" id="avalicao-otimo">
-                                            <input type="radio" name="avaliacao" id="avalicao-bom">
-                                            <input type="radio" name="avaliacao" id="avalicao-regular">
-                                            <input type="radio" name="avaliacao" id="avalicao-ruim">
-                                            <input type="radio" name="avaliacao" id="avalicao-pessimo">
+                                                <label class="row" for="avalicao-pessimo" role="button"
+                                                    onclick="setAvalicao(5)">
+                                                    <div class="col-12 text-center"><i id="icon-avalicao-pessimo"
+                                                            class="far fa-angry"></i></div>
+                                                    <div class="col-12 text-center">Péssimo</div>
+                                                </label>
+                                            </div>
+                                            <!-- Radios da Avaliacao ocultos -->
+                                            <div class="sr-only">
+                                                <input type="radio" name="avaliacao" id="avalicao-otimo">
+                                                <input type="radio" name="avaliacao" id="avalicao-bom">
+                                                <input type="radio" name="avaliacao" id="avalicao-regular">
+                                                <input type="radio" name="avaliacao" id="avalicao-ruim">
+                                                <input type="radio" name="avaliacao" id="avalicao-pessimo">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Observações -->
-                                <div class="row">
                                     <!-- Observações -->
-                                    <div class="col-12">
-                                        <label for="observacoes">Observações</label>
-                                        <textarea id="observacoes" class="form-control" rows="4"></textarea>
+                                    <div class="row">
+                                        <!-- Observações -->
+                                        <div class="col-12">
+                                            <label for="observacoes">Observações</label>
+                                            <textarea id="observacoes" class="form-control" rows="4"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- /.card -->
                         </div>
-
-
-                        <!-- /.card -->
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <a href="#" class="btn btn-secondary">Cancel</a>
-                        <input type="submit" value="Enviar" class="btn btn-success float-right">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="btn btn-secondary">Cancel</a>
+                            <input type="submit" value="Enviar" class="btn btn-success float-right">
+                        </div>
                     </div>
-                </div>
+                </form>
             </section>
             <!-- /.content -->
         </div>
@@ -413,7 +412,8 @@
             <!-- <div class="float-right d-none d-sm-block">
                 <b>Version</b> 3.2.0
             </div> -->
-            <strong>Copyright &copy; 2022 <a href="/">Pesquisa de Satisfação | Polícia Civil</a>.</strong> Todos os direitos reservados.
+            <strong>Copyright &copy; 2022 <a href="/">Pesquisa de Satisfação | Polícia Civil</a>.</strong> Todos os
+            direitos reservados.
         </footer>
 
         <!-- Control Sidebar -->
