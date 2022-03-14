@@ -30,63 +30,43 @@ public class PesquisaDTO {
     public PesquisaDTO() {
     }
 
-    // public PesquisaDTO(String nome, String idade, Character sexo, String cpf,
-    // String email, String telefone,
-    // Boolean deficiencia, Boolean lgbt, String nome_local, String nome_atendente,
-    // String nome_cargo,
-    // String nome_servico, String numero_bo, String ano_bo, String periodo, String
-    // avaliacao,
-    // String observacao) {
-    // this.nome = nome;
-    // this.idade = idade;
-    // this.sexo = sexo;
-    // this.cpf = cpf;
-    // this.email = email;
-    // this.telefone = telefone;
-    // this.deficiencia = deficiencia;
-    // this.lgbt = lgbt;
-    // this.nome_local = nome_local;
-    // this.nome_atendente = nome_atendente;
-    // this.nome_cargo = nome_cargo;
-    // this.nome_servico = nome_servico;
-    // this.numero_bo = numero_bo;
-    // this.ano_bo = ano_bo;
-    // this.periodo = periodo;
-    // this.avaliacao = avaliacao;
-    // this.observacao = observacao;
-    // }
+  
 
     public Pessoa getPessoa() {
         Pessoa pessoa = new Pessoa();
-        pessoa.setNome(this.nome);
+        pessoa.setNome(this.nome.toUpperCase());
         pessoa.setIdade(Integer.parseInt(this.idade));
-        pessoa.setSexo(this.sexo);
-        pessoa.setCpf(this.cpf);
-        pessoa.setEmail(this.email);
-        pessoa.setTelefone(this.telefone);
+        pessoa.setSexo(this.sexo.toUpperCase());
+        pessoa.setCpf(this.cpf.replace(".", "").replace("-", ""));
+        pessoa.setEmail(this.email.toUpperCase());
+        pessoa.setTelefone(this.telefone.replace("(","").replace(")", "").replace("-", "").replace(" ", ""));
         pessoa.setDeficiencia(this.deficiencia.equals("Sim") ? true : false);
-        pessoa.setLgbt(this.lgbt.equals("Sim") ? true : false);
-
+        if(this.lgbt!=null) {
+        	pessoa.setLgbt(this.lgbt.equals("Sim") ? true : false);
+        }else {
+         pessoa.setLgbt(false);
+        }
+       	
         return pessoa;
     }
 
     public Cargo getCargo() {
         Cargo cargo = new Cargo();
-        cargo.setNome(this.nome_cargo);
+        cargo.setNome(this.nome_cargo.toUpperCase());
 
         return cargo;
     }
 
     public Local getLocal() {
         Local local = new Local();
-        local.setNome(this.nome_local);
+        local.setNome(this.nome_local.toUpperCase());
 
         return local;
     }
 
     public Servico getServico() {
         Servico servico = new Servico();
-        servico.setNome(this.nome_servico);
+        servico.setNome(this.nome_servico.toUpperCase());
 
         return servico;
     }
@@ -107,10 +87,10 @@ public class PesquisaDTO {
             atendimento.setAno_bo(-1);
         }
         
-        atendimento.setPeriodo(this.periodo);
+        atendimento.setPeriodo(this.periodo.toUpperCase());
         atendimento.setAvaliacao(Integer.parseInt(this.avaliacao));
-        atendimento.setObservacao(this.observacao);
-        atendimento.setNome_atendente(this.nome_atendente);
+        atendimento.setObservacao(this.observacao.toUpperCase());
+        atendimento.setNome_atendente(this.nome_atendente.toUpperCase());
         atendimento.setCargo(this.getCargo());
         atendimento.setLocal(this.getLocal());
         atendimento.setServico(this.getServico());
