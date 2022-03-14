@@ -1,6 +1,6 @@
 
 // Script para controlar a exibicao do Numero do BO e o ano, dependendo da opcao selecionada
-let selectServico = document.querySelector("#servico");
+let selectServico = document.querySelector("#nome_servico");
 selectServico.addEventListener("change", exibirNumeroAnoBo);
 
 function exibirNumeroAnoBo() {

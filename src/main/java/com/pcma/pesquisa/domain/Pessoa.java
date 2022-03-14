@@ -20,7 +20,7 @@ public class Pessoa implements Serializable{
 	
 	private Integer idade;
 	
-	private Character sexo;
+	private String sexo;
 	
 	private String cpf;
 	
@@ -48,11 +48,11 @@ public class Pessoa implements Serializable{
 		this.idade = idade;
 	}
 
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
 
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 
@@ -95,6 +95,14 @@ public class Pessoa implements Serializable{
 	public void setLgbt(boolean lgbt) {
 		this.lgbt = lgbt;
 	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [cpf=" + cpf + ", deficiencia=" + deficiencia + ", email=" + email + ", id=" + id + ", idade="
+				+ idade + ", lgbt=" + lgbt + ", nome=" + nome + ", sexo=" + sexo + ", telefone=" + telefone + "]";
+	}
+
+	
 
 	
 	
