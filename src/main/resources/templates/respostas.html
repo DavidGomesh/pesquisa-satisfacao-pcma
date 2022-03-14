@@ -158,8 +158,8 @@
             <section class="content">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover">
-                            <thead class="thead-dark">
+                        <table class="table table-bordered table-striped table-hover table-sm">
+                            <thead class="thead-dark text-center">
                                 <tr>
                                     <th>Nome</th>
                                     <th>Idade</th>
@@ -169,33 +169,36 @@
                                     <th>Email</th>
                                     <th>PCD</th>
                                     <th>LGBTQIA+</th>
-                                    <th>Local de Atendimento</th>
-                                    <th>Nome do Atendente</th>
+                                    <th>Local</th>
+                                    <th>Atendente</th>
                                     <th>Cargo</th>
                                     <th>Serviço</th>
                                     <th>Período</th>
                                     <th>Avaliação</th>
-                                    <th>Comentários</th>
+                                    <th>Observações</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
+                            <tbody class="text-center">
+                                <tr th:each="atendimento : ${atendimentos}">
+                                    <td th:text="${atendimento.pessoa.nome}">-</td>
+                                    <td th:text="${atendimento.pessoa.idade}">-</td>
+                                    <td th:text="${atendimento.pessoa.sexo}">-</td>
+                                    <td th:text="${atendimento.pessoa.cpf}">-</td>
+                                    <td th:text="${atendimento.pessoa.telefone}">-</td>
+                                    <td th:text="${atendimento.pessoa.email}">-</td>
+                                    <td th:text="${atendimento.pessoa.deficiencia ? 'Sim' : 'Não'}">-</td>
+                                    <td th:text="${atendimento.pessoa.lgbt ? 'Sim' : 'Não'}">-</td>
+                                    <td th:text="${atendimento.local.nome}">-</td>
+                                    <td th:text="${atendimento.nome_atendente}">-</td>
+                                    <td th:text="${atendimento.cargo.nome}">-</td>
+                                    <td th:text="${atendimento.servico.nome}">-</td>
+                                    <td th:text="${atendimento.periodo}">-</td>
+                                    <td th:text="${atendimento.avaliacao + '/5'}">-</td>
+                                    <td th:text="${atendimento.observacao == '' ? '-' : atendimento.observacao}">-</td>
                                 </tr>
+
+                                <!-- String nome; -->
+                                <!-- String nome = ""; -->
                                 
                             </tbody>
                             <!-- <tfoot>
