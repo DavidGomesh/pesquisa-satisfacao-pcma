@@ -29,7 +29,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="brand-image  elevation-2">
+                <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="brand-image elevation-2">
                 <span class="brand-text font-weight-light">Polícia Civil</span>
             </a>
 
@@ -45,31 +45,80 @@
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
-                        <li class="nav-item">
+                        <li class="nav-item menu-open">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-link"></i>
                                 <p>
-                                    Dashboard
+                                    Serviços
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
+
                                 <li class="nav-item">
-                                    <a href="../../index.html" class="nav-link">
-                                        <i class="fas fa-circle nav-icon"></i>
-                                        <p>Dashboard v1</p>
+                                    <a href="https://www.policiacivil.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Polívia Civil</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="../../index2.html" class="nav-link">
+                                    <a href="https://delegaciaonline.policiacivil.ma.gov.br/" class="nav-link" target="_blank">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Dashboard v2</p>
+                                        <p>Delegacia Online</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="../../index3.html" class="nav-link">
+                                    <a href="https://www.policiacivil.ma.gov.br/delegacias/delegacias-na-capital-2019/" class="nav-link" target="_blank">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Dashboard v3</p>
+                                        <p>Delegacias na Capital</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="../../index.html" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Delegacias no Interior</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://www.policiacivil.ma.gov.br/delegacia-geral-ramais/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Delegacia Geral - RAMAIS</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://www.ssp.ma.gov.br/estatisticas/estatisticas-da-grande-sao-luis/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Estatísticas de São Luís</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <hr style="border-color: rgb(189, 189, 189);">
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a href="http://www.pm.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Polívia Militar</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="http://www.cbm.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Corpo de Bombeiros</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://www.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Governo do Maranhão</p>
                                     </a>
                                 </li>
                             </ul>
@@ -87,7 +136,8 @@
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="mr-2" width="50px">
                             <h1>Pesquisa de Satisfação | Polícia Civil</h1>
                         </div>
                         <!-- <div class="col-sm-6">
@@ -398,7 +448,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <a href="#" class="btn btn-secondary">Cancel</a>
+                            <input type="reset" value="Limpar" class="btn btn-secondary">
                             <input type="submit" value="Enviar" class="btn btn-success float-right">
                         </div>
                     </div>
