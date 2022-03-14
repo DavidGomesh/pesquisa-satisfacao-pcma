@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pesquisa de Satisfação | Polícia Civil</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{assets/font-awesome/css/all.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{assets/bootstrap/css/adminlte.min.css}">
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Links  -->
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/" class="brand-link">
+                <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="brand-image elevation-2">
+                <span class="brand-text font-weight-light">Polícia Civil</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user (Removido) -->
+
+                <!-- SidebarSearch Form (Removido) -->
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-link"></i>
+                                <p>
+                                    Serviços
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="https://www.policiacivil.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Polívia Civil</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://delegaciaonline.policiacivil.ma.gov.br/" class="nav-link"
+                                        target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Delegacia Online</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://www.policiacivil.ma.gov.br/delegacias/delegacias-na-capital-2019/"
+                                        class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Delegacias na Capital</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="../../index.html" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Delegacias no Interior</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://www.policiacivil.ma.gov.br/delegacia-geral-ramais/"
+                                        class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Delegacia Geral - RAMAIS</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://www.ssp.ma.gov.br/estatisticas/estatisticas-da-grande-sao-luis/"
+                                        class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Estatísticas de São Luís</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <hr style="border-color: rgb(189, 189, 189);">
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="http://www.pm.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Polívia Militar</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="http://www.cbm.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Corpo de Bombeiros</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="https://www.ma.gov.br/" class="nav-link" target="_blank">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Governo do Maranhão</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="mr-2" width="50px">
+                            <h1>Respostas da Pesquisa de Satisfação | Polícia Civil</h1>
+                        </div>
+                        <!-- <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Project Add</li>
+                            </ol>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Idade</th>
+                                    <th>Sexo</th>
+                                    <th>CPF</th>
+                                    <th>Telefone</th>
+                                    <th>Email</th>
+                                    <th>PCD</th>
+                                    <th>LGBTQIA+</th>
+                                    <th>Local de Atendimento</th>
+                                    <th>Nome do Atendente</th>
+                                    <th>Cargo</th>
+                                    <th>Serviço</th>
+                                    <th>Período</th>
+                                    <th>Avaliação</th>
+                                    <th>Comentários</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                
+                            </tbody>
+                            <!-- <tfoot>
+                                <tr>
+                                    <th>Rendering engine</th>
+                                    <th>Browser</th>
+                                    <th>Platform(s)</th>
+                                    <th>Engine version</th>
+                                    <th>CSS grade</th>
+                                </tr>
+                            </tfoot> -->
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="main-footer">
+            <!-- <div class="float-right d-none d-sm-block">
+                <b>Version</b> 3.2.0
+            </div> -->
+            <strong>Copyright &copy; 2022 <a href="/">Pesquisa de Satisfação | Polícia Civil</a>.</strong> Todos os
+            direitos reservados.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script th:src="@{assets/jquery/jquery.min.js}"></script>
+    <!-- Bootstrap 4 -->
+    <script th:src="@{assets/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <!-- AdminLTE App -->
+    <script th:src="@{assets/js/adminlte.min.js}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <!-- <script src="assets/js/demo.js"></script> -->
+    <script th:src="@{assets/font-awesome/js/all.min.js}"></script>
+    <!-- Script para controlar a exibicao do Numero do BO e o ano, dependendo da opcao selecionada -->
+    <script th:src="@{assets/js/exibirNumeroAnoBo.js}"></script>
+    <!-- Scrip para controlar a mudança de opção na Avaliação -->
+    <script th:src="@{assets/js/setAvaliacao.js}"></script>
+</body>
+
+</html>
