@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class HomeController {
@@ -41,7 +42,7 @@ public class HomeController {
     }
 
     @PostMapping("/salvar")
-    public String salvarAvaliacao(PesquisaDTO pesquisa){
+    public String salvarAvaliacao(PesquisaDTO pesquisa, RedirectAttributes attr){
         Atendimento atendimento = pesquisa.getAtendimento();
         Servico servico = atendimento.getServico();
         Pessoa pessoa = atendimento.getPessoa();
@@ -54,6 +55,7 @@ public class HomeController {
         servicoService.salvar(servico);
         atendimentoService.salvar(atendimento);
 
-        return "home";
+        attr.addFlashAttribute("success", "Pesquisa enviada com sucesso");
+        return "redirect:/";
     }
 }
