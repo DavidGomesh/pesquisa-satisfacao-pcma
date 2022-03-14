@@ -19,6 +19,7 @@ public class PesquisaDTO {
     private String nome_atendente;
     private String nome_local;
     private String nome_cargo;
+    
     private String nome_servico;
 
     private String numero_bo;
