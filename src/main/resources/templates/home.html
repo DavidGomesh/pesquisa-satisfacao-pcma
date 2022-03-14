@@ -217,7 +217,7 @@
                                             <!-- Telefone -->
                                             <div class="form-group">
                                                 <label for="telefone">Telefone</label>
-                                                <input type="tel"  id="telefone" name="telefone" class="form-control" data-mask="(00) 00000-0000"
+                                                <input type="text"  id="telefone" name="telefone" class="form-control" data-mask="(00) 00000-0000"
                                                     placeholder="Ex.: (00) 0000-0000" min="0" th:text="${telefone}">
                                             </div>
                                         </div>
@@ -357,7 +357,7 @@
                                             <!-- Ano -->
                                             <div class="form-group">
                                                 <label for="ano_bo">Ano</label>
-                                                <input type="tel" id="ano_bo" name="ano_bo" class="form-control" placeholder="Ano"
+                                                <input type="tel" id="ano_bo" name="ano_bo" class="form-control" data-mask="0000" placeholder="Ano"
                                                     min="0" max="2022" th:text="${ano_bo}">
                                             </div>
                                         </div>
