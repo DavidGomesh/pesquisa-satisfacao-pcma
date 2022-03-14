@@ -29,6 +29,16 @@ public class Atendimento implements Serializable{
 	private String observacao;
 	
 	private String nome_atendente;
+	
+	@ManyToOne
+	private Cargo cargo;
+
+	@ManyToOne
+	private Local local;
+
+	@ManyToOne
+	private Servico servico;
+
 
 	public Long getId() {
 		return id;
@@ -90,5 +100,37 @@ public class Atendimento implements Serializable{
 		return serialVersionUID;
 	}
 
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
 
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+
+	public Cargo getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(Cargo cargo) {
+		this.cargo = cargo;
+	}
+
+	public Local getLocal() {
+		return local;
+	}
+
+	public void setLocal(Local local) {
+		this.local = local;
+	}
+
+	public Servico getServico() {
+		return servico;
+	}
+
+	public void setServico(Servico servico) {
+		this.servico = servico;
+	}
+
+	
 }

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.pcma.pesquisa.domain.Pessoa;
 
 @Repository
-public interface PessoaRespository extends JpaRepository<Pessoa, Long>{
+public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
 
 }
