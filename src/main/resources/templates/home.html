@@ -91,7 +91,7 @@
 											<label for="cpf">CPF</label>
 											<input type="text" id="cpf" name="cpf" class="form-control"
 												data-mask="000.000.000-00" placeholder="Ex.:000.000.000-00" min="0"
-												th:text="${cpf}" onblur="validarCPF(this.value)"/>
+												th:text="${cpf}" onblur="validarCPF(this.value)" />
 										</div>
 									</div>
 
@@ -354,18 +354,22 @@
 	</div>
 	<!-- /.content-wrapper -->
 
-
-	<script th:src="@{assets/js/exibirNumeroAnoBo.js}"></script>
-	<!-- Scrip para controlar a mudança de opção na Avaliação -->
-	<script th:src="@{assets/js/setAvaliacao.js}"></script>
-	<script th:src="@{plugins/select2/js/select2.full.min.js}"></script>
-	<script>
-		$(document).ready(function () {
-			$('#nome_local').select2({
-				theme: 'bootstrap4'
+	<div layout:fragment="scripts">
+		<script th:src="@{assets/js/exibirNumeroAnoBo.js}"></script>
+		<!-- Scrip para controlar a mudança de opção na Avaliação -->
+		<script th:src="@{assets/js/setAvaliacao.js}"></script>
+		<script th:src="@{plugins/select2/js/select2.full.min.js}"></script>
+		<script>
+			$(document).ready(function () {
+				$('#nome_local').select2({
+					theme: 'bootstrap4'
+				});
 			});
-		});
-	</script>
+		</script>
+		<script th:src="@{assets/js/validarCpf.js}"></script>
+		<script th:src="@{assets/js/setAvaliacao.js}"></script>
+	</div>
+
 </body>
 
 </html>
