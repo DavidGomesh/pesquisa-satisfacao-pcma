@@ -22,8 +22,21 @@
     <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Links  -->
+        <!-- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        </nav> -->
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-dark">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <!-- <li class="nav-item d-none d-sm-inline-block">
+                    <a href="../../index3.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
+                </li> -->
+            </ul>
         </nav>
         <!-- /.navbar -->
 
@@ -65,14 +78,16 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="https://delegaciaonline.policiacivil.ma.gov.br/" class="nav-link" target="_blank">
+                                    <a href="https://delegaciaonline.policiacivil.ma.gov.br/" class="nav-link"
+                                        target="_blank">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Delegacia Online</p>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="https://www.policiacivil.ma.gov.br/delegacias/delegacias-na-capital-2019/" class="nav-link" target="_blank">
+                                    <a href="https://www.policiacivil.ma.gov.br/delegacias/delegacias-na-capital-2019/"
+                                        class="nav-link" target="_blank">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Delegacias na Capital</p>
                                     </a>
@@ -86,14 +101,16 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="https://www.policiacivil.ma.gov.br/delegacia-geral-ramais/" class="nav-link" target="_blank">
+                                    <a href="https://www.policiacivil.ma.gov.br/delegacia-geral-ramais/"
+                                        class="nav-link" target="_blank">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Delegacia Geral - RAMAIS</p>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="https://www.ssp.ma.gov.br/estatisticas/estatisticas-da-grande-sao-luis/" class="nav-link" target="_blank">
+                                    <a href="https://www.ssp.ma.gov.br/estatisticas/estatisticas-da-grande-sao-luis/"
+                                        class="nav-link" target="_blank">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Estatísticas de São Luís</p>
                                     </a>
@@ -102,7 +119,7 @@
                                 <li class="nav-item">
                                     <hr style="border-color: rgb(189, 189, 189);">
                                 </li>
-                                
+
                                 <li class="nav-item">
                                     <a href="http://www.pm.ma.gov.br/" class="nav-link" target="_blank">
                                         <i class="far fa-circle nav-icon"></i>
@@ -185,8 +202,9 @@
                                         <div class="col-6 col-md-4">
                                             <div class="form-group">
                                                 <label for="idade">Idade</label>
-                                                <input type="number" id="idade" name="idade" class="form-control" data-mask="00" placeholder="Idade"
-                                                    min="0" max="120" th:text="${idade}">
+                                                <input type="number" id="idade" name="idade" class="form-control"
+                                                    data-mask="00" placeholder="Idade" min="0" max="120"
+                                                    th:text="${idade}">
                                             </div>
                                         </div>
 
@@ -194,7 +212,8 @@
                                         <div class="col-6 col-md-4">
                                             <div class="form-group">
                                                 <label for="sexo">Sexo</label>
-                                                <select id="sexo" name="sexo" class="form-control custom-select" th:select="${sexo}">
+                                                <select id="sexo" name="sexo" class="form-control custom-select"
+                                                    th:select="${sexo}">
                                                     <option selected disabled>Selecione</option>
                                                     <option>Masculino</option>
                                                     <option>Feminino</option>
@@ -210,17 +229,19 @@
                                             <!-- CPF -->
                                             <div class="form-group">
                                                 <label for="cpf">CPF</label>
-                                                <input type="text" id="cpf" name="cpf" class="form-control" data-mask="000.000.000-00" placeholder="Ex.:000.000.000-00"
-                                                    min="0" th:text="${cpf}">
+                                                <input type="text" id="cpf" name="cpf" class="form-control"
+                                                    data-mask="000.000.000-00" placeholder="Ex.:000.000.000-00" min="0"
+                                                    th:text="${cpf}">
                                             </div>
                                         </div>
 
-                                        <div class="col-6"> 
+                                        <div class="col-6">
                                             <!-- Telefone -->
                                             <div class="form-group">
                                                 <label for="telefone">Telefone</label>
-                                                <input type="tel"  id="telefone" name="telefone" class="form-control" data-mask="(00) 00000-0000"
-                                                    placeholder="Ex.: (00) 0000-0000" min="0" th:text="${telefone}">
+                                                <input type="tel" id="telefone" name="telefone" class="form-control"
+                                                    data-mask="(00) 00000-0000" placeholder="Ex.: (00) 0000-0000"
+                                                    min="0" th:text="${telefone}">
                                             </div>
                                         </div>
                                     </div>
@@ -243,7 +264,8 @@
                                             <!-- Pessoa com Deficiencia -->
                                             <div class="form-group">
                                                 <label for="deficiencia">Pessoa com Deficiencia</label>
-                                                <select id="deficiencia" name="deficiencia" class="form-control custom-select" th:select="${deficiencia}">
+                                                <select id="deficiencia" name="deficiencia"
+                                                    class="form-control custom-select" th:select="${deficiencia}">
                                                     <option selected>Não</option>
                                                     <option>Sim</option>
                                                 </select>
@@ -257,7 +279,8 @@
                                             <!-- Comunidade LGBTQIA+ -->
                                             <div class="form-group">
                                                 <label for="lgbt">Comunidade LGBTQIA+</label>
-                                                <select id="lgbt" name="lgbt" class="form-control custom-select" th:select="${lgbt}">
+                                                <select id="lgbt" name="lgbt" class="form-control custom-select"
+                                                    th:select="${lgbt}">
                                                     <option selected disabled>Selecione</option>
                                                     <option>Sim</option>
                                                     <option>Não</option>
@@ -287,7 +310,8 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="nome_local">Local de Atendimento</label>
-                                                <select id="nome_local" name="nome_local" class="form-control custom-select" th:select="${nome_local}">
+                                                <select id="nome_local" name="nome_local"
+                                                    class="form-control custom-select" th:select="${nome_local}">
                                                     <option selected disabled>Selecione</option>
                                                     <option>Delegacia de São Luís</option>
                                                     <option>Delegacia de Timon</option>
@@ -304,8 +328,9 @@
                                             <!-- Nome do Atendente -->
                                             <div class="form-group">
                                                 <label for="nome_atendente">Nome do Atendente</label>
-                                                <input type="text" id="nome_atendente" name="nome_atendente" class="form-control"
-                                                    placeholder="Nome do Atendente" th:text="${nome_atendente}">
+                                                <input type="text" id="nome_atendente" name="nome_atendente"
+                                                    class="form-control" placeholder="Nome do Atendente"
+                                                    th:text="${nome_atendente}">
                                             </div>
                                         </div>
                                     </div>
@@ -316,7 +341,8 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="nome_cargo">Cargo</label>
-                                                <select id="nome_cargo" name="nome_cargo" class="form-control custom-select" th:select="${nome_cargo}">
+                                                <select id="nome_cargo" name="nome_cargo"
+                                                    class="form-control custom-select" th:select="${nome_cargo}">
                                                     <option selected disabled>Selecione</option>
                                                     <option>Atendente</option>
                                                     <option>Policial</option>
@@ -332,7 +358,8 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="nome_servico">Serviço</label>
-                                                <select id="nome_servico" name="nome_servico" class="form-control custom-select" th:select="${nome_servico}">
+                                                <select id="nome_servico" name="nome_servico"
+                                                    class="form-control custom-select" th:select="${nome_servico}">
                                                     <option selected disabled>Selecione</option>
                                                     <option>Acompanhamento de Processos</option>
                                                     <option>Registro de Ocorrência</option>
@@ -350,8 +377,9 @@
                                             <!-- Numero do BO -->
                                             <div class="form-group">
                                                 <label for="numero_bo">Número do BO</label>
-                                                <input type="number" id="numero_bo" name="numero_bo" class="form-control"
-                                                    placeholder="Número sem o ano" min="0" th:text="${numero_bo}">
+                                                <input type="number" id="numero_bo" name="numero_bo"
+                                                    class="form-control" placeholder="Número sem o ano" min="0"
+                                                    th:text="${numero_bo}">
                                             </div>
                                         </div>
 
@@ -359,8 +387,8 @@
                                             <!-- Ano -->
                                             <div class="form-group">
                                                 <label for="ano_bo">Ano</label>
-                                                <input type="tel" id="ano_bo" name="ano_bo" class="form-control" placeholder="Ano"
-                                                    min="0" max="2022" th:text="${ano_bo}">
+                                                <input type="tel" id="ano_bo" name="ano_bo" class="form-control"
+                                                    placeholder="Ano" min="0" max="2022" th:text="${ano_bo}">
                                             </div>
                                         </div>
                                     </div>
@@ -371,7 +399,8 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="periodo">Período de Atendimento</label>
-                                                <select id="periodo" name="periodo" class="form-control custom-select" th:select="${periodo}">
+                                                <select id="periodo" name="periodo" class="form-control custom-select"
+                                                    th:select="${periodo}">
                                                     <option selected disabled>Selecione</option>
                                                     <option>Matutino</option>
                                                     <option>Vespertino</option>
@@ -426,11 +455,16 @@
                                             </div>
                                             <!-- Radios da Avaliacao ocultos -->
                                             <div class="sr-only">
-                                                <input type="radio" name="avaliacao" th:value="5" th:text="${avaliacao}" id="avalicao-otimo">
-                                                <input type="radio" name="avaliacao" th:value="4" th:text="${avaliacao}" id="avalicao-bom">
-                                                <input type="radio" name="avaliacao" th:value="3" th:text="${avaliacao}" id="avalicao-regular">
-                                                <input type="radio" name="avaliacao" th:value="2" th:text="${avaliacao}" id="avalicao-ruim">
-                                                <input type="radio" name="avaliacao" th:value="1" th:text="${avaliacao}" id="avalicao-pessimo">
+                                                <input type="radio" name="avaliacao" th:value="5" th:text="${avaliacao}"
+                                                    id="avalicao-otimo">
+                                                <input type="radio" name="avaliacao" th:value="4" th:text="${avaliacao}"
+                                                    id="avalicao-bom">
+                                                <input type="radio" name="avaliacao" th:value="3" th:text="${avaliacao}"
+                                                    id="avalicao-regular">
+                                                <input type="radio" name="avaliacao" th:value="2" th:text="${avaliacao}"
+                                                    id="avalicao-ruim">
+                                                <input type="radio" name="avaliacao" th:value="1" th:text="${avaliacao}"
+                                                    id="avalicao-pessimo">
                                             </div>
                                         </div>
                                     </div>
@@ -440,7 +474,8 @@
                                         <!-- Observações -->
                                         <div class="col-12">
                                             <label for="observacao">Observações</label>
-                                            <textarea id="observacao" name="observacao" class="form-control" rows="4" th:text="${observacao}"></textarea>
+                                            <textarea id="observacao" name="observacao" class="form-control" rows="4"
+                                                th:text="${observacao}"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -478,11 +513,11 @@
 
     <!-- jQuery -->
     <script th:src="@{assets/jquery/jquery.min.js}"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-	
-	
-	<!-- Bootstrap 4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+
+    <!-- Bootstrap 4 -->
     <script th:src="@{assets/bootstrap/js/bootstrap.bundle.min.js}"></script>
     <!-- AdminLTE App -->
     <script th:src="@{assets/js/adminlte.min.js}"></script>
@@ -495,7 +530,7 @@
     <script th:src="@{assets/js/setAvaliacao.js}"></script>
     <script th:src="@{plugins/select2/js/select2.full.min.js}"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#nome_local').select2({
                 theme: 'bootstrap4'
             });
