@@ -60,7 +60,7 @@
 						</thead>
 						<tbody class="text-center">
 							<tr th:each="atendimento : ${atendimentos}">
-								<td th:text="${atendimento.data_avaliacao}">-</td>
+								<td th:text="${#temporals.format(atendimento.data_avaliacao,'dd/MM/yyyy')}">-</td>
 								<td th:text="${atendimento.pessoa.nome}">-</td>
 								<td th:text="${atendimento.pessoa.idade}">-</td>
 								<td th:text="${atendimento.pessoa.sexo}">-</td>
@@ -70,7 +70,7 @@
 								<td th:text="${atendimento.pessoa.deficiencia ? 'Sim' : 'Não'}">-</td>
 								<td th:text="${atendimento.pessoa.lgbt ? 'Sim' : 'Não'}">-</td>
 								<td th:text="${atendimento.local.nome}">-</td>
-								<td th:text="${atendimento.data_atendimento}">-</td>
+								<td th:text="${#temporals.format(atendimento.data_atendimento,'dd/MM/yyyy')}">-</td>
 								<td th:text="${atendimento.nome_atendente}">-</td>
 								<td th:text="${atendimento.cargo.nome}">-</td>
 								<td th:text="${atendimento.servico.nome}">-</td>
