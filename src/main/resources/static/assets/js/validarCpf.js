@@ -32,5 +32,6 @@ function validarCPF(cpf) {
 		rev = 0;	
 	if (rev != parseInt(cpf.charAt(10)))
 		return false;	
+		alert("ok")
 	return true;   
 }
