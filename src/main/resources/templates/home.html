@@ -14,6 +14,8 @@
     <link rel="stylesheet" th:href="@{assets/font-awesome/css/all.min.css}">
     <!-- Theme style -->
     <link rel="stylesheet" th:href="@{assets/bootstrap/css/adminlte.min.css}">
+    <link rel="stylesheet" th:href="@{plugins/select2/css/select2.min.css}">
+    <link rel="stylesheet" th:href="@{plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -491,6 +493,14 @@
     <script th:src="@{assets/js/exibirNumeroAnoBo.js}"></script>
     <!-- Scrip para controlar a mudança de opção na Avaliação -->
     <script th:src="@{assets/js/setAvaliacao.js}"></script>
+    <script th:src="@{plugins/select2/js/select2.full.min.js}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#nome_local').select2({
+                theme: 'bootstrap4'
+            });
+        });
+    </script>
 </body>
 
 </html>
