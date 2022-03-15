@@ -91,7 +91,7 @@
 											<label for="cpf">CPF</label>
 											<input type="text" id="cpf" name="cpf" class="form-control"
 												data-mask="000.000.000-00" placeholder="Ex.:000.000.000-00" min="0"
-												th:text="${cpf}">
+												th:text="${cpf}" onblur="validarCPF(this.value)"/>
 										</div>
 									</div>
 

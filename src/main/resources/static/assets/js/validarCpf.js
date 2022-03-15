@@ -31,6 +31,6 @@ function validarCPF(cpf) {
 	if (rev == 10 || rev == 11)	
 		rev = 0;	
 	if (rev != parseInt(cpf.charAt(10)))
-		return false;		
+		return false;	
 	return true;   
 }
