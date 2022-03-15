@@ -1,6 +1,7 @@
 package com.pcma.pesquisa.domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,6 +28,8 @@ public class Atendimento implements Serializable{
 	private Integer avaliacao;
 	
 	private String observacao;
+
+	private LocalDate data_atendimento;
 	
 	private String nome_atendente;
 	
@@ -39,6 +42,7 @@ public class Atendimento implements Serializable{
 	@ManyToOne
 	private Servico servico;
 
+	private LocalDate data_avaliacao;
 
 	public Long getId() {
 		return id;
@@ -132,5 +136,19 @@ public class Atendimento implements Serializable{
 		this.servico = servico;
 	}
 
-	
+	public LocalDate getData_atendimento() {
+		return data_atendimento;
+	}
+
+	public void setData_atendimento(LocalDate data_atendimento) {
+		this.data_atendimento = data_atendimento;
+	}
+
+    public LocalDate getData_avaliacao() {
+        return data_avaliacao;
+    }
+
+    public void setData_avaliacao(LocalDate data_avaliacao) {
+        this.data_avaliacao = data_avaliacao;
+    }
 }

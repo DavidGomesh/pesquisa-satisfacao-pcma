@@ -39,6 +39,7 @@
 					<table class="table table-bordered table-striped table-hover table-sm" id="example1">
 						<thead class="thead-dark text-center">
 							<tr>
+								<th>Data da Avaliação</th>
 								<th>Nome</th>
 								<th>Idade</th>
 								<th>Sexo</th>
@@ -48,6 +49,7 @@
 								<th>PCD</th>
 								<th>LGBTQIA+</th>
 								<th>Local</th>
+								<th>Data de Atendimento</th>
 								<th>Atendente</th>
 								<th>Cargo</th>
 								<th>Serviço</th>
@@ -58,6 +60,7 @@
 						</thead>
 						<tbody class="text-center">
 							<tr th:each="atendimento : ${atendimentos}">
+								<td th:text="${atendimento.data_avaliacao}">-</td>
 								<td th:text="${atendimento.pessoa.nome}">-</td>
 								<td th:text="${atendimento.pessoa.idade}">-</td>
 								<td th:text="${atendimento.pessoa.sexo}">-</td>
@@ -67,6 +70,7 @@
 								<td th:text="${atendimento.pessoa.deficiencia ? 'Sim' : 'Não'}">-</td>
 								<td th:text="${atendimento.pessoa.lgbt ? 'Sim' : 'Não'}">-</td>
 								<td th:text="${atendimento.local.nome}">-</td>
+								<td th:text="${atendimento.data_atendimento}">-</td>
 								<td th:text="${atendimento.nome_atendente}">-</td>
 								<td th:text="${atendimento.cargo.nome}">-</td>
 								<td th:text="${atendimento.servico.nome}">-</td>

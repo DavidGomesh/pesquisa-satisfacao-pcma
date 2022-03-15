@@ -1,5 +1,7 @@
 package com.pcma.pesquisa.dto;
 
+import java.time.LocalDate;
+
 import com.pcma.pesquisa.domain.Atendimento;
 import com.pcma.pesquisa.domain.Cargo;
 import com.pcma.pesquisa.domain.Local;
@@ -17,6 +19,7 @@ public class PesquisaDTO {
     private String lgbt;
 
     private String nome_atendente;
+    private String data_atendimento;
     private String nome_local;
     private String nome_cargo;
     
@@ -91,10 +94,12 @@ public class PesquisaDTO {
         atendimento.setPeriodo(this.periodo.toUpperCase());
         atendimento.setAvaliacao(Integer.parseInt(this.avaliacao));
         atendimento.setObservacao(this.observacao.toUpperCase());
+        atendimento.setData_atendimento(LocalDate.parse(this.data_atendimento));
         atendimento.setNome_atendente(this.nome_atendente.toUpperCase());
         atendimento.setCargo(this.getCargo());
         atendimento.setLocal(this.getLocal());
         atendimento.setServico(this.getServico());
+        atendimento.setData_avaliacao(LocalDate.now());
 
         return atendimento;
     }
@@ -235,5 +240,13 @@ public class PesquisaDTO {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public String getData_atendimento() {
+        return data_atendimento;
+    }
+
+    public void setData_atendimento(String data_atendimento) {
+        this.data_atendimento = data_atendimento;
     }
 }
