@@ -41,9 +41,9 @@ public class PesquisaDTO {
         pessoa.setNome(this.nome.toUpperCase());
         pessoa.setIdade(Integer.parseInt(this.idade));
         pessoa.setSexo(this.sexo.toUpperCase());
-        pessoa.setCpf(this.cpf.replace(".", "").replace("-", ""));
+        pessoa.setCpf(this.cpf);
         pessoa.setEmail(this.email.toUpperCase());
-        pessoa.setTelefone(this.telefone.replace("(","").replace(")", "").replace("-", "").replace(" ", ""));
+        pessoa.setTelefone(this.telefone);
         pessoa.setDeficiencia(this.deficiencia.equals("Sim") ? true : false);
         if(this.lgbt!=null) {
         	pessoa.setLgbt(this.lgbt.equals("Sim") ? true : false);
