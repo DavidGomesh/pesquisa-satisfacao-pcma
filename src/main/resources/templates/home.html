@@ -32,7 +32,8 @@
 
         <!-- Main content -->
         <section class="content">
-            <form th:action="@{/salvar}" method="post" th:object="${pesquisa}" id="pesquisa" class="needs-validation" novalidate onsubmit="return validarForm(this)">
+            <form th:action="@{/salvar}" method="post" th:object="${pesquisa}" id="pesquisa" class="needs-validation"
+                novalidate onsubmit="return validarForm(this)">
                 <div class="form-row">
                     <div class="col-12">
                         <!-- Dados Pessoais Optativos -->
@@ -382,8 +383,8 @@
                 <div class="form-row">
                     <div class="col-12">
                         <input type="reset" value="Limpar" class="btn btn-secondary">
-                        <input type="submit" value="Enviar" class="btn btn-success float-right" id="btn-enviar"> 
-                       <!--   <button class="button">Enviar</button> -->
+                        <input type="submit" value="Enviar" class="btn btn-success float-right" id="btn-enviar">
+                        <!--   <button class="button">Enviar</button> -->
                     </div>
                 </div>
             </form>
@@ -401,7 +402,7 @@
 
         <!-- Validacao de CPF -->
         <script th:src="@{assets/js/validarCpf.js}"></script>
-        
+
         <!-- Select 2 -->
         <script th:src="@{plugins/select2/js/select2.full.min.js}"></script>
         <script>
@@ -433,29 +434,20 @@
                 }, false);
             })();            
         </script>
+        <!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
 
         <!-- Valida Form -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script>
             function validarForm(form) {
                 if (validarCPF(form.cpf.value)) {
                     return true;
                 } else {
-                    form.cpf.classList.add("is-invalid");
                     return false;
                 }
             }
         </script>
-    
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script>
-    $('#btn-enviar').on('click',function(){
-    	
-    	toastr.success("Pesquisa enviada com sucesso"); 
-    	toastr.error("Erro ao enviar pesquisa");
-    	
-    });
-    </script>        
+
     </div>
 
 </body>

@@ -42,7 +42,7 @@ public class HomeController {
     }
 
     @PostMapping("/salvar")
-    public String salvarAvaliacao(PesquisaDTO pesquisa, RedirectAttributes attr){
+    public String salvarAvaliacao(PesquisaDTO pesquisa){
         Atendimento atendimento = pesquisa.getAtendimento();
         Servico servico = atendimento.getServico();
         Pessoa pessoa = atendimento.getPessoa();
@@ -55,7 +55,6 @@ public class HomeController {
         servicoService.salvar(servico);
         atendimentoService.salvar(atendimento);
 
-        attr.addFlashAttribute("success", "Pesquisa enviada com sucesso");
-        return "redirect:/";
+        return "redirect:/pesquisa/enviada";
     }
 }
