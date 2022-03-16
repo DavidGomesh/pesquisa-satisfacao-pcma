@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR" layout:decorate="~{layout}">
+<html lang="pt-BR" layout:decorate="~{/layout}">
 
 <head>
 	<meta charset="utf-8">
 	<!-- DataTables -->
-    <link rel="stylesheet" th:href="@{plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
-    <link rel="stylesheet" th:href="@{plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
-    <link rel="stylesheet" th:href="@{plugins/datatables-buttons/css/buttons.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-buttons/css/buttons.bootstrap4.min.css}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -19,7 +19,7 @@
 			<div class="container-fluid">
 				<div class="row mb-2">
 					<div class="col-sm-6 d-flex align-items-center">
-						<img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="mr-2" width="50px">
+						<img th:src="@{/assets/images/pcma-logo.png}" alt="pcma-logo.png" class="mr-2" width="50px">
 						<h1>Respostas da Pesquisa de Satisfação | Polícia Civil</h1>
 					</div>
 					<!-- <div class="col-sm-6">
@@ -89,18 +89,18 @@
 
 	<div layout:fragment="scripts">
 		<!-- DataTables  & Plugins -->
-		<script th:src="@{plugins/datatables/jquery.dataTables.min.js}"></script>
-		<script th:src="@{plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
-		<script th:src="@{plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
-		<script th:src="@{plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
-		<script th:src="@{plugins/datatables-buttons/js/dataTables.buttons.min.js}"></script>
-		<script th:src="@{plugins/datatables-buttons/js/buttons.bootstrap4.min.js}"></script>
-		<script th:src="@{plugins/jszip/jszip.min.js}"></script>
-		<script th:src="@{plugins/pdfmake/pdfmake.min.js}"></script>
-		<script th:src="@{plugins/pdfmake/vfs_fonts.js}"></script>
-		<script th:src="@{plugins/datatables-buttons/js/buttons.html5.min.js}"></script>
-		<script th:src="@{plugins/datatables-buttons/js/buttons.print.min.js}"></script>
-		<script th:src="@{plugins/datatables-buttons/js/buttons.colVis.min.js}"></script>
+		<script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
+		<script th:src="@{/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
+		<script th:src="@{/plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
+		<script th:src="@{/plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
+		<script th:src="@{/plugins/datatables-buttons/js/dataTables.buttons.min.js}"></script>
+		<script th:src="@{/plugins/datatables-buttons/js/buttons.bootstrap4.min.js}"></script>
+		<script th:src="@{/plugins/jszip/jszip.min.js}"></script>
+		<script th:src="@{/plugins/pdfmake/pdfmake.min.js}"></script>
+		<script th:src="@{/plugins/pdfmake/vfs_fonts.js}"></script>
+		<script th:src="@{/plugins/datatables-buttons/js/buttons.html5.min.js}"></script>
+		<script th:src="@{/plugins/datatables-buttons/js/buttons.print.min.js}"></script>
+		<script th:src="@{/plugins/datatables-buttons/js/buttons.colVis.min.js}"></script>
 		<script>
 			$(function () {
 				$("#example1").DataTable({

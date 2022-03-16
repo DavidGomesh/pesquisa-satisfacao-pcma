@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" th:href="@{plugins/select2/css/select2.min.css}">
-    <link rel="stylesheet" th:href="@{plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/select2/css/select2.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6 d-flex align-items-center">
-                        <img th:src="@{assets/images/pcma-logo.png}" alt="pcma-logo.png" class="mr-2" width="50px">
+                        <img th:src="@{/assets/images/pcma-logo.png}" alt="pcma-logo.png" class="mr-2" width="50px">
                         <h1>Pesquisa de Satisfação | Polícia Civil</h1>
                     </div>
                     <!-- <div class="col-sm-6">
@@ -395,16 +395,16 @@
 
     <div layout:fragment="scripts">
         <!-- Exibir numero e ano do BO -->
-        <script th:src="@{assets/js/exibirNumeroAnoBo.js}"></script>
+        <script th:src="@{/assets/js/exibirNumeroAnoBo.js}"></script>
 
         <!-- Scrip para controlar a mudança de opção na Avaliação -->
-        <script th:src="@{assets/js/setAvaliacao.js}"></script>
+        <script th:src="@{/assets/js/setAvaliacao.js}"></script>
 
         <!-- Validacao de CPF -->
-        <script th:src="@{assets/js/validarCpf.js}"></script>
+        <script th:src="@{/assets/js/validarCpf.js}"></script>
 
         <!-- Select 2 -->
-        <script th:src="@{plugins/select2/js/select2.full.min.js}"></script>
+        <script th:src="@{/plugins/select2/js/select2.full.min.js}"></script>
         <script>
             $(document).ready(function () {
                 $('#nome_local').select2({
