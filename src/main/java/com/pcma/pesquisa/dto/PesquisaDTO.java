@@ -34,43 +34,47 @@ public class PesquisaDTO {
     public PesquisaDTO() {
     }
 
-  
-
     public Pessoa getPessoa() {
         Pessoa pessoa = new Pessoa();
-        pessoa.setNome(this.nome.toUpperCase());
-        pessoa.setIdade(Integer.parseInt(this.idade));
-        pessoa.setSexo(this.sexo.toUpperCase());
-        pessoa.setCpf(this.cpf);
-        pessoa.setEmail(this.email.toUpperCase());
-        pessoa.setTelefone(this.telefone);
-        pessoa.setDeficiencia(this.deficiencia.equals("Sim") ? true : false);
-        if(this.lgbt!=null) {
-        	pessoa.setLgbt(this.lgbt.equals("Sim") ? true : false);
-        }else {
-         pessoa.setLgbt(false);
-        }
-       	
+
+        pessoa.setNome(nome.toUpperCase());
+        pessoa.setIdade(!idade.isBlank() ? Integer.parseInt(idade) : -1);
+        pessoa.setSexo(sexo != null ? sexo.toUpperCase() : "");
+        pessoa.setCpf(cpf != null ? cpf.toUpperCase() : "");
+        pessoa.setEmail(email.toUpperCase());
+        pessoa.setTelefone(telefone.toUpperCase());
+        pessoa.setDeficiencia(deficiencia != null ? deficiencia.toUpperCase() : "");
+        pessoa.setLgbt(lgbt != null ? lgbt.toUpperCase() : "");
+
+        // pessoa.setNome(!nome.isBlank() ? nome.toUpperCase() : "");
+        // pessoa.setIdade(!idade.isBlank() ? Integer.parseInt(idade) : -1);
+        // pessoa.setSexo(!sexo.isBlank() ? sexo.toUpperCase() : "");
+        // pessoa.setCpf(!cpf.isBlank() ? cpf.toUpperCase() : "");
+        // pessoa.setEmail(!email.isBlank() ? email.toUpperCase() : "");
+        // pessoa.setTelefone(!telefone.isBlank() ? telefone.toUpperCase() : "");
+        // pessoa.setDeficiencia(!deficiencia.isBlank() ? (deficiencia.equals("Sim") ? true : false) : null);
+        // pessoa.setLgbt(!lgbt.isBlank() ? (lgbt.equals("Sim") ? true : false) : null);
+
         return pessoa;
     }
 
     public Cargo getCargo() {
         Cargo cargo = new Cargo();
-        cargo.setNome(this.nome_cargo.toUpperCase());
+        cargo.setNome(nome_cargo != null ? nome_cargo.toUpperCase() : "");
 
         return cargo;
     }
 
     public Local getLocal() {
         Local local = new Local();
-        local.setNome(this.nome_local.toUpperCase());
+        local.setNome(nome_local.toUpperCase());
 
         return local;
     }
 
     public Servico getServico() {
         Servico servico = new Servico();
-        servico.setNome(this.nome_servico.toUpperCase());
+        servico.setNome(nome_servico.toUpperCase());
 
         return servico;
     }
@@ -79,23 +83,13 @@ public class PesquisaDTO {
         Atendimento atendimento = new Atendimento();
         atendimento.setPessoa(this.getPessoa());
 
-        if(!this.numero_bo.isBlank()){
-            atendimento.setNumero_bo(this.numero_bo);
-        } else{
-            atendimento.setNumero_bo("-1");
-        }
-
-        if (!this.numero_bo.isBlank()) {
-            atendimento.setAno_bo(Integer.parseInt(this.ano_bo));
-        } else {
-            atendimento.setAno_bo(-1);
-        }
-        
-        atendimento.setPeriodo(this.periodo.toUpperCase());
+        atendimento.setNumero_bo(!numero_bo.isBlank() ? numero_bo.toUpperCase() : "-1");
+        atendimento.setAno_bo(!ano_bo.isBlank() ? Integer.parseInt(ano_bo.toUpperCase()) : -1);
+        atendimento.setPeriodo(periodo.toUpperCase());
         atendimento.setAvaliacao(Integer.parseInt(this.avaliacao));
-        atendimento.setObservacao(this.observacao.toUpperCase());
-        atendimento.setData_atendimento(LocalDate.parse(this.data_atendimento));
-        atendimento.setNome_atendente(this.nome_atendente.toUpperCase());
+        atendimento.setObservacao(observacao.toUpperCase());
+        atendimento.setData_atendimento(!data_atendimento.isBlank() ? LocalDate.parse(data_atendimento) : null);
+        atendimento.setNome_atendente(nome_atendente.toUpperCase());
         atendimento.setCargo(this.getCargo());
         atendimento.setLocal(this.getLocal());
         atendimento.setServico(this.getServico());
@@ -103,8 +97,6 @@ public class PesquisaDTO {
 
         return atendimento;
     }
-
-    // public
 
     public String getNome() {
         return nome;

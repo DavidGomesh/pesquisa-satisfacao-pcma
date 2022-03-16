@@ -67,8 +67,8 @@
 								<td th:text="${atendimento.pessoa.cpf}">-</td>
 								<td th:text="${atendimento.pessoa.telefone}">-</td>
 								<td th:text="${atendimento.pessoa.email}">-</td>
-								<td th:text="${atendimento.pessoa.deficiencia ? 'Sim' : 'Não'}">-</td>
-								<td th:text="${atendimento.pessoa.lgbt ? 'Sim' : 'Não'}">-</td>
+								<td th:text="${atendimento.pessoa.deficiencia}">-</td>
+								<td th:text="${atendimento.pessoa.lgbt}">-</td>
 								<td th:text="${atendimento.local.nome}">-</td>
 								<td th:text="${#temporals.format(atendimento.data_atendimento,'dd/MM/yyyy')}">-</td>
 								<td th:text="${atendimento.nome_atendente}">-</td>

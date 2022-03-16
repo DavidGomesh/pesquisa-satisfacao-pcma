@@ -28,9 +28,9 @@ public class Pessoa implements Serializable{
 	
 	private String telefone;
 	
-	private Boolean deficiencia;
+	private String deficiencia;
 	
-	private Boolean lgbt;
+	private String lgbt;
 
 	public String getNome() {
 		return nome;
@@ -80,23 +80,35 @@ public class Pessoa implements Serializable{
 		this.telefone = telefone;
 	}
 
-	public boolean isDeficiencia() {
-		return deficiencia;
-	}
+	public Long getId() {
+        return id;
+    }
 
-	public void setDeficiencia(boolean deficiencia) {
-		this.deficiencia = deficiencia;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public boolean isLgbt() {
-		return lgbt;
-	}
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
 
-	public void setLgbt(boolean lgbt) {
-		this.lgbt = lgbt;
-	}
+    public String getDeficiencia() {
+        return deficiencia;
+    }
 
-	@Override
+    public void setDeficiencia(String deficiencia) {
+        this.deficiencia = deficiencia;
+    }
+
+    public String getLgbt() {
+        return lgbt;
+    }
+
+    public void setLgbt(String lgbt) {
+        this.lgbt = lgbt;
+    }
+
+    @Override
 	public String toString() {
 		return "Pessoa [cpf=" + cpf + ", deficiencia=" + deficiencia + ", email=" + email + ", id=" + id + ", idade="
 				+ idade + ", lgbt=" + lgbt + ", nome=" + nome + ", sexo=" + sexo + ", telefone=" + telefone + "]";
