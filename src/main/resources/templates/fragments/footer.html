@@ -6,12 +6,20 @@
 </head>
 
 <body>
-	<footer class="main-footer" th:fragment="rodape">
+	<footer class="main-footer d-flex" th:fragment="rodape">
 		<!-- <div class="float-right d-none d-sm-block">
                 <b>Version</b> 3.2.0
             </div> -->
-		<strong>Copyright &copy; 2022 <a href="/">Pesquisa de Satisfação | DTIPC-MA</a>.</strong> Todos os
-		direitos reservados.
+		<div>
+			<img th:src="@{/assets/images/pcma-logo.png}" alt="pcma-logo.png" class="mr-2" width="50px">
+		</div>
+		
+		<div>
+			<strong>Copyright &copy; 2022 <br>
+			<a href="/">Pesquisa de Satisfação | DTIPC-MA</a>. <br>
+			</strong> Todos os
+			direitos reservados.
+		</div>
 	</footer>
 </body>
 
