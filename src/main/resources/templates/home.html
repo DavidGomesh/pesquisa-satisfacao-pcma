@@ -440,9 +440,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script>
             function validarForm(form) {
-                if (validarCPF(form.cpf.value)) {
+                let cpf = form.cpf.value;
+                if (
+                    (cpf == "" || validarCPF(cpf)) &&
+                    (form.nome_local.selectedIndex != 0) &&
+                    (form.nome_servico.selectedIndex != 0) &&
+                    (form.periodo.selectedIndex != 0) &&
+                    (form.avaliacao.value != "")
+                ) {
                     return true;
                 } else {
+                    toastr.error("Preencha todos os campos obrigatórios!");
                     return false;
                 }
             }

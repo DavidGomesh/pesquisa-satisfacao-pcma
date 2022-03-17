@@ -1,5 +1,4 @@
 function validarCPF(strCPF) {
-	if(strCPF ==  "") return true;
 	var x = strCPF.replace('.', '');
 	var x = x.replace('.', '');
 	var strCPF = x.replace('-', '');
