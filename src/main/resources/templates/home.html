@@ -173,13 +173,12 @@
                                         <div class="form-group">
                                             <label for="nome_local">Local de Atendimento <small
                                                     class="text-danger">(obrigatório)</small></label>
-                                            <select id="nome_local" name="nome_local" class="form-control custom-select"
-                                                th:select="${nome_local}" required>
+                                            <select id="nome_local" name="nome_local" class="form-control custom-select" required >
                                                 <option value="" selected disabled>Selecione</option>
-                                                <option value="Delegacia de São Luís">Delegacia de São Luís</option>
-                                                <option value="Delegacia de Timon">Delegacia de Timon</option>
-                                                <option value="Delegacia de Imperatriz">Delegacia de Imperatriz</option>
-                                                <option value="Delegacia de Santa Inês">Delegacia de Santa Inês</option>
+                                                <option 
+                                                    th:each="unidade : ${listaUnidade}"
+                                                    th:value="${unidade.idUnidades}" 
+                                                    th:text="${unidade.descricao}">Delegacia</option>
                                             </select>
                                             <div class="valid-feedback">Tudo ok!</div>
                                             <div class="invalid-feedback">Selecione o Local de Atendimento!</div>

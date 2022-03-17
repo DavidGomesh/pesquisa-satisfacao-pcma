@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -37,7 +38,8 @@ public class Atendimento implements Serializable{
 	private Cargo cargo;
 
 	@ManyToOne
-	private Local local;
+	@JoinColumn(name="fk_unidade")
+	private Unidades unidade;
 
 	@ManyToOne
 	private Servico servico;
@@ -120,12 +122,12 @@ public class Atendimento implements Serializable{
 		this.cargo = cargo;
 	}
 
-	public Local getLocal() {
-		return local;
+	public Unidades getUnidade() {
+		return unidade;
 	}
 
-	public void setLocal(Local local) {
-		this.local = local;
+	public void setUnidade(Unidades unidade) {
+		this.unidade = unidade;
 	}
 
 	public Servico getServico() {

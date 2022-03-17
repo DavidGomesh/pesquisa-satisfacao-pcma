@@ -4,11 +4,17 @@ import java.time.LocalDate;
 
 import com.pcma.pesquisa.domain.Atendimento;
 import com.pcma.pesquisa.domain.Cargo;
-import com.pcma.pesquisa.domain.Local;
 import com.pcma.pesquisa.domain.Pessoa;
 import com.pcma.pesquisa.domain.Servico;
+import com.pcma.pesquisa.domain.Unidades;
+import com.pcma.pesquisa.service.UnidadeService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class PesquisaDTO {
+    @Autowired
+    private UnidadeService unidadeService;
+    
     private String nome;
     private String idade;
     private String sexo;
@@ -65,11 +71,11 @@ public class PesquisaDTO {
         return cargo;
     }
 
-    public Local getLocal() {
-        Local local = new Local();
-        local.setNome(nome_local.toUpperCase());
-
-        return local;
+    public Unidades getUnidades() {
+        Integer idUnidade = Integer.parseInt(nome_local);
+        Unidades unidade = new Unidades();
+        unidade.setIdUnidades(idUnidade);
+        return unidade;
     }
 
     public Servico getServico() {
@@ -91,7 +97,8 @@ public class PesquisaDTO {
         atendimento.setData_atendimento(!data_atendimento.isBlank() ? LocalDate.parse(data_atendimento) : null);
         atendimento.setNome_atendente(nome_atendente.toUpperCase());
         atendimento.setCargo(this.getCargo());
-        atendimento.setLocal(this.getLocal());
+        // atendimento.setLocal(this.getLocal());
+        atendimento.setUnidade(getUnidades());
         atendimento.setServico(this.getServico());
         atendimento.setData_avaliacao(LocalDate.now());
 
